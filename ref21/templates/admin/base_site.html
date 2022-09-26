@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Ref 21 admin') }}{% endblock %}
+
+{% block branding %}
+<img src="{% static 'logo.png' %}" width="135" height="68"/>
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Ref21 Admin Page</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
